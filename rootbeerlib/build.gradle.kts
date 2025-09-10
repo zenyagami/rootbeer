@@ -38,16 +38,23 @@ android {
             path = file("src/main/cpp/CMakeLists.txt")
         }
     }
-
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
 }
 
 dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.mockito)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                artifact(tasks.named("bundleReleaseAar"))
+
+                groupId = "com.github.zenyagami"
+                artifactId = "rootbeerlib"
+                version = project.version.toString()
+            }
+        }
+    }
 }
