@@ -2,6 +2,9 @@
 
 [![RootBeer](https://www.appbrain.com/stats/libraries/shield/rootbeer.svg)](https://www.appbrain.com/stats/libraries/details/rootbeer/rootbeer)
 
+Note: This is a fork of the original scottyab/rootbeer(https://www.appbrain.com/stats/libraries/details/rootbeer/rootbeer) library. The sole purpose of this version is to add support for devices with 16k memory page sizes. This fork will not be actively maintained or supported. For the original project, please see the link above.
+[![](https://jitpack.io/v/zenyagami/rootbeer.svg)](https://jitpack.io/#zenyagami/rootbeer)
+
 A tasty root checker library and sample app. We've scoured the internets for different methods of answering that age old question... **Has this device got root?**
 
 # Root checks
@@ -89,7 +92,7 @@ Available on [Maven Central](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22
 
 ```java
 dependencies {
-    implementation 'com.scottyab:rootbeer-lib:0.1.1'
+    implementation 'implementation("com.github.zenyagami:rootbeer:Tag")'
 }
 ```
 
